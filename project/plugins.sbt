@@ -1,0 +1,5 @@
+addSbtPlugin("io.ino" % "sbt-pillar-plugin" % "2.1.3")
+addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.1")
+addSbtPlugin("org.scalastyle" % "scalastyle-sbt-plugin" % "1.0.0")
+addSbtPlugin("com.github.mwz" % "sbt-sonar" % "1.3.0")
+addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.0")
