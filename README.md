@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+Embedded Cassandra Extension
+=======================================
 
-You can use the [editor on GitHub](https://github.com/shaileshre/embedded-cassandra-extension/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+What is it ?
+------------
+Embedded cassandra extension is a Scala implementation to simplify development and testing activities using Cassandra DB.
+It introduces a basic template based implementation which encapsulates the lower level operations [On lines of Spring jdbc].
+It also introduces an extension to CassandraUnit [test framework] to add support for external cassandra DB.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+Why the need ?
+--------------
+1. Cassandra database access needs lower level implementation.
+2. CassandraUnit introduction leads to duplication of DDL statements [thus decreasing maintainability]
+3. CassandraUnit creates the data structures during the test execution. This might lead in decreased performance.
+4. CassandraUnit drops the complete key-space in order to perform cleanup. This might lead in decreased performance.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+Main features :
+---------------
+1. Introduces templates, row and parameter mappers for simplifying data access implementation.
+2. Supports interaction with any existing external cassandra server during test phase.
+3. Supports easy switching between embedded and external cassandra server.
+4. Supports data load and cleanup operations before and after test execution.
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/shaileshre/embedded-cassandra-extension/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Examples :
+----------
+https://github.com/shaileshre/embedded-cassandra-extension/tree/master/embedded-cassandra-extension-example
